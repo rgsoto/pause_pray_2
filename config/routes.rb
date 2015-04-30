@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   get 'hello/world'
 
-  get 'hello/index'
-    match '/curl_example' => 'request_example#curl_post_example', via: :post
+  get 'hello/index' => 'hello#world'
+  get 'kdfj/:id' => 'prayers#some_prayer'
+  #match '/curl_example' => 'request_example#curl_post_example', via: :post
+  
+  post 'hello/index' => 'hello#curl_post_example'
 
   #get 'welcome/index'
 

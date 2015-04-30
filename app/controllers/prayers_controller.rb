@@ -19,12 +19,14 @@ class PrayersController < ApplicationController
 
   # GET /prayers/1/edit
   def edit
+    @prayer = Prayer.(:id)
   end
 
   # POST /prayers
   # POST /prayers.json
   def create
     @prayer = Prayer.new(prayer_params)
+  end 
 
     respond_to do |format|
       if @prayer.save

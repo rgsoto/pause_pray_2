@@ -1,6 +1,21 @@
 <h1>New prayer</h1>
-<%= render 'form' %>
+
 
 <%= link_to 'Back', prayers_path %>
 
 
+<%= form_for :prayers, url: prayers_path do |f| %>
+  <p>
+    <%= f.label :subject %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :Descrifdsfdsfsdaption %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

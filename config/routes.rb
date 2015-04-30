@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'hello/world'
+
+  get 'hello/index'
+    match '/curl_example' => 'request_example#curl_post_example', via: :post
+
   #get 'welcome/index'
 
   resources :prayers
@@ -7,6 +12,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  #root 'hello#world'
+    match '/request' => 'request_example#create', via: :post
+ 
   root 'welcome#index'
   #root 'prayers#index'
 
